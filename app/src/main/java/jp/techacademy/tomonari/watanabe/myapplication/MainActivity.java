@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     TextView mTextView;
+    TextView mTextView2;
 
     int sethour;
     int setminute;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button2.setOnClickListener(this);
 
         mTextView = (TextView) findViewById(R.id.TextView);
+        mTextView2 = (TextView) findViewById(R.id.TextView2);
+
 
     }
 
@@ -54,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         sethour = hourOfDay;
                         setminute = minute;
+
+                        mTextView2.setText(String.valueOf(sethour) + ":" + String.valueOf(setminute) +"に設定しました");
 
                         Log.d("UI-PARTS", String.valueOf(hourOfDay) + ":" + String.valueOf(minute));
                     }
